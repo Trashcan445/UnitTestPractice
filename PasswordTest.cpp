@@ -27,3 +27,10 @@ TEST(PasswordTest, unique)
 	int actual = my_password.unique_characters("abc");
 	ASSERT_EQ(3, actual);
 }
+
+TEST(PasswordTest, mixed)
+{
+	Password my_password;
+	int actual = my_password.has_mixed_case("abC12");
+	ASSERT_EQ(true, actual);
+}
